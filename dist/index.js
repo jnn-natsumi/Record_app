@@ -26,6 +26,9 @@ app.use(express_1.default.urlencoded({ extended: true }));
 app.use("/messages", message_1.default);
 app.use("/api/posts", post_1.default);
 app.use("/", express_1.default.static(__dirname + "/public"));
+app.get('*', (req, res) => {
+    res.status(200).sendFile(__dirname + "/public/index.html");
+});
 // 追加終了
 !function initialize() {
     return __awaiter(this, void 0, void 0, function* () {

@@ -10,4 +10,11 @@ router.post('/', function (req, res) {
     PostRepository.save(post);
     res.send(post);
 });
+
+router.get('/', async function (req, res) {
+    const PostRepository = getRepository(Post);
+    const posts = await PostRepository.find();
+    res.send(posts);
+});
+
 export default router;
