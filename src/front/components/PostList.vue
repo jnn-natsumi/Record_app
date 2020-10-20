@@ -13,6 +13,9 @@
         <td>{{post.body}}</td>
       </tr>
     </table>
+    <div>
+        <a href="http://localhost:3000">記録投稿へ</a>
+    </div>
   </div>
 </template>
 <script lang="ts">

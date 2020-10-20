@@ -21,7 +21,7 @@
         <textarea v-model="post.body"></textarea>
       </div>
       <div>
-        <button @click="sendMessage()">記録する！</button>
+          <b-button @click="sendMessage()" size="lg" variant="outline-primary">記録する！</b-button>
       </div>
     </div><!-- 入力エリア ここまで-->
     <div v-else><!-- 結果エリア ここから -->
@@ -36,6 +36,9 @@
         <p>内容</p>
         <p>{{post.body}}</p>
       </div>
+      <div>
+        <a href="http://localhost:3000/post/list">記録一覧へ</a>
+    </div>
     </div><!-- 結果エリア ここまで -->
   </div>
 </template>
