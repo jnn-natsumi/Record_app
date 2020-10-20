@@ -16,6 +16,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use("/messages", messageController)
 app.use("/api/posts", postController)
 app.use("/", express.static(__dirname + "/public"))
+app.get('*', (req, res) => {
+    res.status(200).sendFile(__dirname + "/public/index.html");
+});
 // 追加終了
 
 !async function initialize(){
