@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div  class="container text-center">
     <router-view /> <!-- Postコンポーネントを使っています。 -->
   </div>
 </template>
@@ -22,3 +22,8 @@ export default Vue.extend({
     // components:{Post} // PostEnqueteを画面で使えるようにしています。
 });
 </script>
+<style module>
+.container {
+    padding: 80px 120px;
+}
+</style>
