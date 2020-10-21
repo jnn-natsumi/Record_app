@@ -17,7 +17,7 @@
         <td>{{post.day}}</td>
         <td>{{post.body | truncate(10)}}</td>
         <td><b-button size="lg" variant="outline-primary">更新</b-button></td>
-        <td><b-button size="lg" variant="outline-danger">削除</b-button></td>
+        <td><b-button size="lg" variant="outline-danger" >削除</b-button></td>
       </tr>
     </tbody>
     </table>
