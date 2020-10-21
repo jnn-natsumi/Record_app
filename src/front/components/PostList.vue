@@ -17,7 +17,7 @@
         <td>{{post.day}}</td>
         <td>{{post.body | truncate(10)}}</td>
         <td><b-button size="lg" variant="outline-primary">更新</b-button></td>
-        <td><b-button size="lg" variant="outline-danger" @click="deletePost(post)">削除</b-button></td>
+        <td><b-button size="lg" variant="outline-danger">削除</b-button></td>
       </tr>
     </tbody>
     </table>
@@ -45,18 +45,6 @@ export default Vue.extend({
         return value;
       }
       return value.substring(0, length) + ommision;
-    }
-  },
-  methods: {
-    //   削除機能
-      doChangeState: function(post) {
-      post.state = post.state ? 0 : 1
-    },
-      deletePost: function(post) {
-        var index = this.posts.indexOf(post);
-        if(confirm('本当に削除しますか？')){ 
-        this.posts.splice(index, 1);
-        }
     }
   }
 });
