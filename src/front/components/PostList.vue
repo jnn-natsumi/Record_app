@@ -1,21 +1,22 @@
 <template>
   <div>
-    <h1>記録一覧</h1>
-    <table>
+    <h1>Record List</h1>
+    <table class="table">
+    <thead>
       <tr>
-        <th>日数</th>
         <th>タイトル</th>
+        <th>日数</th>
         <th>内容</th>
       </tr>
+    </thead>
+    <tbody>
       <tr v-for="post in posts" :key="post.id">
-        <td>{{post.day}}</td>
         <td>{{post.title}}</td>
+        <td>{{post.day}}</td>
         <td>{{post.body}}</td>
       </tr>
+    </tbody>
     </table>
-    <div>
-        <a href="http://localhost:3000">記録投稿へ</a>
-    </div>
   </div>
 </template>
 <script lang="ts">

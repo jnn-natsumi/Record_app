@@ -12,16 +12,16 @@
         <input type="radio" id="2" value="2" v-model="post.day"><label for="2">2日</label>
         <input type="radio" id="1" value="1" v-model="post.day"><label for="1">1日</label>
       </div>
-      <div>
+      <div class="col-sm-12 form-group">
         <p>タイトル</p>
-        <textarea v-model="post.title"></textarea>
+        <input class="form-control" id="title" name="title" placeholder="タイトル" type="text" v-model="post.title" required>
       </div>
-      <div>
+      <div class="col-sm-12 form-group">
         <p>内容</p>
-        <textarea v-model="post.body"></textarea>
+        <textarea class="form-control" id="bodys" name="bodys" placeholder="内容" rows="5" v-model="post.body"></textarea>
       </div>
       <div>
-          <b-button @click="sendMessage()" size="lg" variant="outline-primary">記録する！</b-button>
+          <b-button @click="sendMessage()" size="lg" variant="outline-success">記録する！</b-button>
       </div>
     </div><!-- 入力エリア ここまで-->
     <div v-else><!-- 結果エリア ここから -->
@@ -36,9 +36,6 @@
         <p>内容</p>
         <p>{{post.body}}</p>
       </div>
-      <div>
-        <a href="http://localhost:3000/post/list">記録一覧へ</a>
-    </div>
     </div><!-- 結果エリア ここまで -->
   </div>
 </template>
@@ -49,7 +46,7 @@ import axios from "axios";
 export default Vue.extend({
   data() {
     return {
-      title: "プログラミング記録",
+      title: "Programming Record",
       description: "何日間で解決または完成したか",
       post: {},
       posted: false
