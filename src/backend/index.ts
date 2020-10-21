@@ -37,7 +37,8 @@ app.get('*', (req, res) => {
     });
 
 // 3000番ポートでAPIサーバ起動
-    app.listen(3000, () => {
-        console.log('ポート3000番で起動したよ〜〜！')
+const port = process.env.PORT || 3000;
+    app.listen(port, () => {
+        console.log("ポート" + port + "番で起動しました！")
     })
 }()
