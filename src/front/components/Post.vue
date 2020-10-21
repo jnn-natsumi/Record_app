@@ -28,14 +28,14 @@
     </div><!-- 入力エリア ここまで-->
     <div v-else><!-- 結果エリア ここから -->
       <div>
-        点数{{post.day}}点
+        <strong>日数：</strong>{{post.day}}
       </div>
       <div>
-        <p>タイトル</p>
+        <p><strong>タイトル</strong></p>
         <p>{{post.title}}</p>
       </div>
       <div>
-        <p>内容</p>
+        <p><strong>内容</strong></p>
         <p>{{post.body}}</p>
       </div>
     </div><!-- 結果エリア ここまで -->
