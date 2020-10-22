@@ -16,5 +16,11 @@ router.get('/', async function (req, res) {
     const posts = await PostRepository.find();
     res.send(posts);
 });
+// 記録詳細
+router.get('/', async function (req, res) {
+    const PostRepository = getRepository(Post);
+    const posts = await PostRepository.find();
+    res.send(posts);
+});
 
 export default router;

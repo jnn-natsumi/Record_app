@@ -29,4 +29,12 @@ router.get('/', function (req, res) {
         res.send(posts);
     });
 });
+// 記録詳細
+router.get('/', function (req, res) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const PostRepository = typeorm_1.getRepository(Post_1.default);
+        const posts = yield PostRepository.find();
+        res.send(posts);
+    });
+});
 exports.default = router;
