@@ -1,9 +1,9 @@
 <template>
   <div>
     <h1>{{title}}</h1>
-      <p>{{description}}</p>
-      <a href="https://thawing-thicket-84246.herokuapp.com">記録</a>
-      <a href="https://thawing-thicket-84246.herokuapp.com/post/list">一覧</a>
+        <a href="https://thawing-thicket-84246.herokuapp.com">記録</a>
+        <a href="https://thawing-thicket-84246.herokuapp.com/post/list">一覧</a>
+        <p>{{description}}</p>
     <div v-if="!posted"><!-- 入力エリア ここから -->
       <div>
         <input type="radio" id="7" value="7" v-model="post.day"><label for="7">7日以上</label>

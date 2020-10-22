@@ -17,7 +17,7 @@
       <tr v-for="post in posts" :key="post.id">
         <td>{{post.title}}</td>
         <td>{{post.day}}</td>
-        <td>{{post.body}}</td>
+        <td>{{post.body | truncate(10)}}</td>
         <td><b-button size="lg" variant="outline-primary">更新</b-button></td>
         <td><b-button size="lg" variant="outline-danger">削除</b-button></td>
       </tr>
@@ -38,7 +38,17 @@ export default Vue.extend({
   async created() {
     const response = await axios.get("/api/posts");
     this.posts = response.data;
-  }
+  },
+  filters: {
+    truncate: function(value: any) {
+      var length = 10;
+      var ommision = "...";
+      if (value.length <= length) {
+        return value;
+      }
+      return value.substring(0, length) + ommision;
+    }
+  },
 });
 
 
