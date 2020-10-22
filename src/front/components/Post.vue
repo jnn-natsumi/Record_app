@@ -1,8 +1,6 @@
 <template>
   <div>
     <h1>{{title}}</h1>
-        <a href="https://thawing-thicket-84246.herokuapp.com">記録</a>
-        <a href="https://thawing-thicket-84246.herokuapp.com/post/list">一覧</a>
         <p>{{description}}</p>
     <div v-if="!posted"><!-- 入力エリア ここから -->
       <div>
