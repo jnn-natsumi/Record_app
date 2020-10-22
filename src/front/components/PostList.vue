@@ -16,7 +16,7 @@
         <td><a href="https://thawing-thicket-84246.herokuapp.com/post/detail/1">{{post.title}}</a></td>
         <td>{{post.day}}</td>
         <td>{{post.body | truncate(10)}}</td>
-        <td><b-button size="lg" variant="outline-primary">更新</b-button></td>
+        <td><b-button size="lg" variant="outline-primary" @click="alertPost(index)">更新</b-button></td>
         <td><b-button size="lg" variant="outline-danger" @click="deletePost(index)">削除</b-button></td>
       </tr>
     </tbody>
@@ -54,6 +54,9 @@ export default Vue.extend({
         if(confirm('本当に削除しますか？')){ 
         this.posts.splice(index, 1);
         }
+    },
+    alertPost: function disp(){
+	    window.alert('これから実装予定です！');
     }
   }
 });
